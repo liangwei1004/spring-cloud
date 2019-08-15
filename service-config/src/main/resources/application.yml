@@ -1,0 +1,25 @@
+server:
+  port: 8888
+  ssl:
+    key-store: service-config/keystore.p12
+    key-password: 123456
+    key-store-type: PKCS12
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ #指定注册中心地址
+spring:
+  application:
+    name: service-config #这个很重要，这在以后的服务与服务之间相互调用一般都是根据这个name
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/windawaken/test/ #配置git仓库地址
+#          search-paths: respo #配置仓库路径
+          username: windawaken@163.com
+          password: windrain1
+#      label: master #配置仓库的分支
+
+
+
