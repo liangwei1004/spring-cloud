@@ -3,14 +3,14 @@ package com.et;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
-@EnableEurekaClient //向注册中心注册服务
-@EnableZuulProxy //打开路由代理
+@EnableFeignClients
+@EnableEurekaClient
 @SpringBootApplication
-public class ServiceZuulApplication {
+public class ServiceWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceZuulApplication.class, args);
+        SpringApplication.run(ServiceWebApplication.class, args);
     }
 }

@@ -15,9 +15,10 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class ServiceConfigApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ServiceConfigApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceConfigApplication.class, args);
+    }
+
     @Bean
     public EmbeddedServletContainerFactory servletContainer() {
         TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {

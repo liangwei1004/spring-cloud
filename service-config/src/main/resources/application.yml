@@ -16,7 +16,7 @@ spring:
       server:
         git:
           uri: https://github.com/windawaken/test/ #配置git仓库地址
-#          search-paths: respo #配置仓库路径
+          #          search-paths: respo #配置仓库路径
           username: windawaken@163.com
           password: windrain1
 #      label: master #配置仓库的分支

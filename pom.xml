@@ -11,12 +11,11 @@
     <modules>
         <module>config-client</module>
         <module>eurekaclient</module>
-        <module>eurekaclient_2</module>
         <module>eurekaserver</module>
         <module>service-config</module>
         <module>service-feign</module>
-        <module>service-ribbon</module>
         <module>service-zuul</module>
+        <module>service-web</module>
     </modules>
 
 </project>

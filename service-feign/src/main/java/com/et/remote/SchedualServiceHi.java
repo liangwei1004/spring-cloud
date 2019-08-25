@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @updatedate
  * @since 1.0
  */
-@FeignClient(value = "service-hi",fallback = SchedualServiceHiHystric.class) //断路由，如果调用的服务挂了，那么就会执行SchedualServiceHiHystric方法返回提示
+@FeignClient(value = "service-hi", fallback = SchedualServiceHiHystric.class)
+//断路由，如果调用的服务挂了，那么就会执行SchedualServiceHiHystric方法返回提示
 public interface SchedualServiceHi {
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     String sayHiFromClientOne(@RequestParam(value = "name") String name) throws Exception;

@@ -10,13 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication //配置名称一定要是bootstrap.yml 不能是application.yml
 public class ConfigClientApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ConfigClientApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ConfigClientApplication.class, args);
+    }
+
     @Value("${druid.url}")
     String url;
+
     @RequestMapping(value = "/hi")
-    public String hi(){
+    public String hi() {
         return url;
     }
 }
